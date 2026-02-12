@@ -1,6 +1,3 @@
-@php
-
-@endphp
 
 <head>
   <meta charset="UTF-8">
@@ -30,17 +27,17 @@
   </div>
   <div class="flex flex-col items-center mt-4">
     <h2 class="font-semibold text-2xl">Prueba POO laravel/php </h2>
-    <form action="{{ route('scan') }}" method="POST" class="bg-gray-100 border border-gray-200 rounded-lg p-6 m-4">
+    <form action="{{ route('scan') }}" method="POST" class="bg-gray-100 border border-gray-200 rounded-lg p-6 m-4 flex flex-col items-start">
       @csrf
-      <p>ingrese un numero</p>
+      <p class="text-gray-800 font-semibold pb-2  ">ingrese un numero</p>
       <input type="number" name="num1" id="num1" placeholder="0" class="border border-gray-300 rounded-md p-2 mb-4">
   
-      <p>ingrese otro numero</p>
+      <p class="text-gray-800 font-semibold pb-2  ">ingrese otro numero</p>
       <input type="number" name="num2" id="num2" placeholder="0" class="border border-gray-300 rounded-md p-2 mb-4">
   
       <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" type="submit" onclick="sumar($num1, $num2)">Sumar</button>
   
-      <p class="m-4">{{$resultado}}</p>
+      <p class="m-4" type="¨result">{{$result}}</p>
     </form>
   </div>
 </body>

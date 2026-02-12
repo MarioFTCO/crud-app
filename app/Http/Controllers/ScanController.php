@@ -12,6 +12,12 @@ class ScanController extends Controller
         $num2 = $request->input('num2');
         $resultado = $num1 + $num2;
 
-        return view('home', compact('resultado'));
+            if($num1 == 0 && $num2 == 0) {
+                $result = 'Introduce dos números para obtener un resultado.';
+            } else {
+                $result = 'el resultado de la suma es: ' . $resultado;
+            }
+
+        return view('home', compact('result', 'resultado'));
     }
 }
