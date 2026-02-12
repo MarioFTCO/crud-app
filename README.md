@@ -38,11 +38,8 @@ Antes de instalar y ejecutar este proyecto, asegúrate de tener instalados los s
 - **PHP** 8.2+
 - **Vite** 7.x - Build tool para frontend
 - **TailwindCSS** 4.1 - Framework CSS
-- **BladeWind** 3.3 - Componentes UI para Blade
 - **PostgreSQL** - Base de datos principal
-- **Pest** 3.8 - Framework de testing
 - **Laravel Breeze** - Autenticación
-- **Concurrently** - Ejecución de múltiples comandos
 
 ## Instalación
 
@@ -67,7 +64,7 @@ npm install
 
 ### 4. Configurar variables de entorno
 
-Copia el archivo de ejemplo `.env.example` y renómbralo a `.env`:
+Copia el archivo de ejemplo `.env.example` y renómbralo a `.env` si es necesario.:
 
 ```bash
 cp .env.example .env
@@ -89,8 +86,6 @@ DB_USERNAME=tu_usuario
 DB_PASSWORD=tu_contraseña
 ```
 
-> **Nota:** Si prefieres usar SQLite, cambia `DB_CONNECTION=sqlite` y elimina las líneas de host, port, username y password.
-
 ### 5. Generar la clave de aplicación
 
 ```bash
@@ -99,10 +94,10 @@ php artisan key:generate
 
 ### 6. Crear la base de datos
 
-Crea una base de datos PostgreSQL con el nombre especificado en `DB_DATABASE`:
+Crea una base de datos PostgreSQL con el nombre especificado en `DB_DATABASE` del env:
 
 ```sql
-CREATE DATABASE crud_app;
+CREATE DATABASE crud_app o crud;
 ```
 
 ### 7. Ejecutar migraciones
@@ -116,11 +111,6 @@ php artisan migrate
 Para desarrollo:
 ```bash
 npm run dev
-```
-
-Para producción:
-```bash
-npm run build
 ```
 
 ## Cómo Ejecutar el Proyecto
@@ -226,14 +216,6 @@ Verifica que PostgreSQL esté ejecutándose y que las credenciales en `.env` sea
 ```bash
 # Windows
 # Verifica el servicio PostgreSQL en Servicios
-```
-
-### Error de permisos en storage/
-
-```bash
-# En Windows (PowerShell como Administrador)
-icacls storage /grant Users:F /T
-icacls bootstrap/cache /grant Users:F /T
 ```
 
 ### Assets no se cargan
