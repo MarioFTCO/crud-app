@@ -94,7 +94,7 @@ php artisan key:generate
 
 ### 6. Crear la base de datos
 
-Crea una base de datos PostgreSQL con el nombre especificado en `DB_DATABASE` del env:
+Crea una base de datos PostgreSQL con el nombre especificado en `DB_DATABASE` del env o usa la que esta en el backup del proyecto:
 
 ```sql
 CREATE DATABASE crud_app o crud;
