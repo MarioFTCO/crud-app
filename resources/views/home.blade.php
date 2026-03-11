@@ -1,4 +1,5 @@
 
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,7 +36,7 @@
       <p class="text-gray-800 font-semibold pb-2  ">ingrese otro numero</p>
       <input type="number" name="num2" id="num2" placeholder="0" class="border border-gray-300 rounded-md p-2 mb-4">
   
-      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" type="submit" onclick="sumar($num1, $num2)">Sumar</button>
+      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" type="submit">Sumar</button>
   
       <p class="m-4" type="¨result">{{$result}}</p>
     </form>

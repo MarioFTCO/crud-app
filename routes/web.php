@@ -5,9 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ScanController;
 
 Route::get('/', function () {
-    return view('home', ['result' => '']);
+    return view('home', ['result'=> '']);
 });
-
 // CRUD de Usuarios
 Route::resource('usuarios', UsuarioController::class);
 

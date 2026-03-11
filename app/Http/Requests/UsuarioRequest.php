@@ -23,7 +23,7 @@ class UsuarioRequest extends FormRequest
     {
         return [
 			'name' => 'required|string',
-			'email' => 'required|string',
+			'email' => 'required|unique:users,email',
 			'address' => 'nullable|string',
 			'phone' => 'nullable|numeric',
         ];
